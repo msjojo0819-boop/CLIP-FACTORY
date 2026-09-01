@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+faster-whisper
+librosa
+soundfile
+numpy
+requests
+stripe
+# Pinned <5: opencv-python-headless 5.x drops cv2.CascadeClassifier, which
+# app/pipeline/reframe.py needs for face-tracking. Without this pin, pip
+# installs 5.x by default and every 9:16/1:1 reframe silently no-ops.
+opencv-python-headless<5
